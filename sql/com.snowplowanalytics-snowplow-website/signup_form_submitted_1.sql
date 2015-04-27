@@ -32,8 +32,8 @@ CREATE TABLE atomic.com_snowplowanalytics_snowplow_website_signup_form_submitted
 	name            varchar       encode lzo,
 	email           varchar       encode lzo,
 	company         varchar       encode lzo,
-	eventsPerMonth  varchar       encode text255,
-	serviceType     varchar       encode text255,
+	eventsPerMonth  varchar(64)   encode text255,
+	serviceType     varchar(64)   encode text255,
 
 	FOREIGN KEY(root_id) REFERENCES atomic.events(event_id)
 )
