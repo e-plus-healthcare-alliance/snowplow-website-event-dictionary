@@ -32,7 +32,7 @@ CREATE TABLE atomic.com_snowplowanalytics_snowplow_website_register_for_real_tim
 	name            varchar       encode lzo,
 	email           varchar       encode lzo,
 	company         varchar       encode lzo,
-	eventsPerMonth  varchar(64)   encode text255,
+	events_per_month varchar(64)   encode text255,
 
 	FOREIGN KEY(root_id) REFERENCES atomic.events(event_id)
 )
