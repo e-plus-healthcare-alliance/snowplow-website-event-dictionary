@@ -14,9 +14,9 @@
 -- License:       Apache License Version 2.0
 -- Release:       2
 --
--- Compatibility: iglu:com.snowplowanalytics.snowplow-website/signup_form_submitted/jsonschema/1-0-0
+-- Compatibility: iglu:com.snowplowanalytics.snowplow-website/trial_form_submitted/jsonschema/1-0-0
 
-CREATE TABLE atomic.com_snowplowanalytics_snowplow_website_signup_form_submitted_1 (
+CREATE TABLE atomic.com_snowplowanalytics_snowplow_website_trial_form_submitted_1 (
 	-- Schema of this type
 	schema_vendor   varchar(128)  encode runlength not null,
 	schema_name     varchar(128)  encode runlength not null,
@@ -32,8 +32,7 @@ CREATE TABLE atomic.com_snowplowanalytics_snowplow_website_signup_form_submitted
 	name            varchar       encode lzo,
 	email           varchar       encode lzo,
 	company         varchar       encode lzo,
-	events_per_month  varchar(64)   encode text255
-
+	events_per_month  varchar(64)   encode text255,
 	FOREIGN KEY(root_id) REFERENCES atomic.events(event_id)
 )
 DISTSTYLE KEY
